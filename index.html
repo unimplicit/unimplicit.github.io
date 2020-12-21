@@ -82,24 +82,39 @@
       
       <p>Recent developments in NLP have led to excellent performance on various semantic tasks. However, an important question that remains open is whether such methods are actually capable of modeling how linguistic meaning is shaped and influenced by context, or if they simply learn superficial patterns that reflect only explicitly stated aspects of meaning. An interesting case in point is the interpretation and understanding of <i>implicit</i> or <i>underspecified</i> language.</p>
 
-      <p>Specifically, language utterances may contain <i>empty</i> or <i>fuzzy</i> elements, such as the following:  units of measurement, as in "she is 30" vs. "it costs 30" (30 what?), bridges and other missing links, as in "she tried to enter the car, but the door was stuck" (the door of what?), implicit semantic roles, as in "I met her while driving" (who was driving?), and various sorts of gradable phenomena; is a "small elephant" smaller than a "big bee"? Where is the boundary between "orange" and "red"?</p>
+      <p>More concretely, language utterances may contain <i>empty</i> or <i>fuzzy</i> elements, such as the following:  units of measurement, as in "she is 30" vs. "it costs 30" (30 what?), bridges and other missing links, as in "she tried to enter the car, but the door was stuck" (the door of what?), implicit semantic roles, as in "I met her while driving" (who was driving?), and various sorts of gradable phenomena; is a "small elephant" smaller than a "big bee"? Where is the boundary between "orange" and "red"?</p>
 
+      <p><i>Implicit</i> and <i>underspecified</i> phenomena have been studied in linguistics and philosophy for decades (Sag, 1976; Heim, 1982; Ballmer and Pinkal, 1983), but empirical studies in NLP are scarce and far between. The number of datasets and task proposals is however growing (Roesiger et al., 2018; Elazar and Goldberg, 2019; Ebner et al., 2020; McMahan and Stone, 2020) and recent studies have shown the difficulty of annotating and modeling implicit and underspecified phenomena (Shwartz and Dagan, 2016; Scholman and Demberg, 2017; Webber et al., 2019).</p>
+      
       <p>The use of <i>implicit</i> and <i>underspecified</i> terms poses serious challenges to standard natural language processing models, and they often require incorporating greater context, using symbolic inference and  common-sense reasoning, or more generally, going <i>beyond</i> strictly lexical and compositional meaning constructs. This challenge  spans all phases of the NLP model's life cycle: from collecting and annotating relevant data, through devising computational methods for modelling such phenomena, to evaluating and designing proper evaluation metrics.</p>
-      
-      
-      <p>Implicit and underspecified phenomena have been studied in linguistics and philosophy for decades (Sag, 1976; Heim, 1982; Ballmer and Pinkal, 1983), but empirical studies in NLP are scarce and far between. The number of datasets and task proposals is however growing (Roesiger et al., 2018; Elazar and Goldberg, 2019; Ebner et al., 2020; McMahan and Stone, 2020) and recent studies have shown the difficulty of annotating and modeling implicit and underspecified phenomena (Shwartz and Dagan, 2016; Scholman and Demberg, 2017; Webber et al., 2019).
-      </p>
-            
+                  
       <p>Furthermore, most existing efforts in NLP are concerned with one particular problem, their benchmarks are narrow in size and scope, and no common platform or standards exist for studying effects on downstream tasks. In our opinion, interpreting  <i>implicit</i> and <i>underspecified</i> language is an inherent part of natural language understanding, these elements are essential for  human-like interpretation, and  modeling them may be critical for downstream applications.</p>
 
-      <p>The goal of this workshop is to bring together theoreticians and practitioners from the entire NLP cycle, from annotation and benchmarking to modeling and applications, and to provide an umbrella for the development, discussion and standardization of the study of understanding implicit and underspecified language. We explicitly encourage papers that propose new benchmarks, models and evaluation schemes that facilitate the interpretation or identification of implicit and underspecified utterances, including but not limited to: empty syntactic elements (verb-phrase ellipsis and syntactic gaps), implicit semantic roles, bridging anaphora, gradable/imprecise terms, and fused heads.</p>
+      <p>The goal of this workshop is to bring together theoreticians and practitioners from the entire NLP cycle, from annotation and benchmarking to modeling and applications, and to provide an umbrella for the development, discussion and standardization of the study of understanding implicit and underspecified language. <!--We explicitly encourage papers that propose new benchmarks, models and evaluation schemes that facilitate the interpretation or identification of implicit and underspecified utterances, including but not limited to: empty syntactic elements (verb-phrase ellipsis and syntactic gaps), implicit semantic roles, bridging anaphora, gradable/imprecise terms, and fused heads.</p-->We solicit papers on the following, and other, topics:</p>
 
+      <ul>
+	<li>Verb-phrase ellipsis and syntactic gaps</li>
+	<li>Implicit semantic roles and semantic relations</li>
+	<li>Bridging anaphora</li>
+	<li>Gradable/imprecise terms</li>
+	<li>Fused heads.</li>
+      </ul>
+      
+      <p>We specifically encourage to address the following themes, for a single phenomenon or a set of phenomena:</p>
+
+      <ul>
+	<li>New benchmarks for implicit/underspecified phenomena</li>
+	<li>Models and modeling strategies for uncovering implicit/underspecified phenomena</li>
+	<li>Evaluation schemes and metrics for the identification and interpretation of implicit and underspecified utterances</li>
+	<li>Implicit/Underspecified phenomena that are not yet within reach with current NLP technology.</li>
+      </ul>
+      
     <a name="task"></a>
     <div class="page-header">
       <h4>Shared Task</h4>
     </div>
 
-      <p>As part of the workshop, we plan to organize a shared task on implicit and underspecified language understanding. The focus of this task will be on modeling the necessity of clarifications due to aspects of meaning that are implicit or underspecified in context. Specif-ically, the task setting will follow the recently proposed task of predicting the need for revision (Bhat et al., 2020) and the data will consist of instances from wikiHowToImprove (Anthonio et al., 2020) that were annotated for context-specific phenomena. The data for the shared task is currently in the process of creation and will be completed by the end of 2020.</p>
+      <p>As part of the workshop, we plan to organize a shared task on implicit and underspecified language understanding. The focus of this task will be on modeling the necessity of clarifications due to aspects of meaning that are implicit or underspecified in context. Specifically, the task setting will follow the recent proposal to predict the need for revision (Bhat et al., 2020). The data will consist of instances from wikiHowToImprove (Anthonio et al., 2020) that were annotated for context-specific phenomena. The data for the shared task is currently in the process of creation and will be completed in early 2021.</p>
 
       <a name="dates"></a>
       <h1>Important Dates</h1>
@@ -113,7 +128,7 @@
 	<li>August 5-6, 2021: Workshop Dates</li>
       </ul>
 
-      All deadlines refer to 11:59pm (UTC/GMT -11 hours).
+      All deadlines are 11:59PM UTC-12:00 ("anywhere on Earth").
       
       <a name="organizers"></a>
       <div class="page-header">
