@@ -80,6 +80,11 @@
 	    Understanding Implicit and Underspecified Language</b></h2></center>
       <center><h4>Workshop to be held in conjunction with ACL-IJCNLP 2021</h4></center>
       <br/>
+      <br/>
+      <div class="alert alert-success" role="alert">
+	<strong>Update 30 Jan 2021: </strong> We are excited to announce details of the shared task, which you can view <a href="#task">here</a>.
+      </div>
+      <br/>
       
       <p>Recent developments in NLP have led to excellent performance on various semantic tasks. However, an important question that remains open is whether such methods are actually capable of modeling how linguistic meaning is shaped and influenced by context, or if they simply learn superficial patterns that reflect only explicitly stated aspects of meaning. An interesting case in point is the interpretation and understanding of <i>implicit</i> or <i>underspecified</i> language.</p>
 
@@ -116,7 +121,22 @@
       <h4>Shared Task</h4>
     </div>
 
-      <p>As part of the workshop, we plan to organize a shared task on implicit and underspecified language understanding. The focus of this task will be on modeling the necessity of clarifications due to aspects of meaning that are implicit or underspecified in context. Specifically, the task setting will follow the recent proposal to predict the need for revision (Bhat et al., 2020). The data will consist of instances from wikiHowToImprove (Anthonio et al., 2020) that were annotated for context-specific phenomena. The data for the shared task is currently in the process of creation and will be completed in early 2021.</p>
+      <p>As part of the workshop, we plan to organize a shared task on implicit and underspecified language understanding. The focus of this task is on modeling the necessity of clarifications due to aspects of meaning that are implicit or underspecified in context. Specifically, the task setting follows the recent proposal to predict the need for revision (Bhat et al., 2020). The data consists of instances from wikiHowToImprove (Anthonio et al., 2020) in which a revision resolved an implicit or underspecified linguist element. The following phenomena are part of the data:</p>
+	<ul>
+	  <li>Pronouns that were replaced by full noun phrases</li>
+	  <li>Occurrences of 'do' that were replaced by more specific verbs.</li>
+	  <li>Insertions of optional verbal phrase complements</li> 
+	  <li>Insertions of adverbial and adjectival modifiers</li>
+	  <li>Insertions of logical quantifiers and modal verbs</li> 
+	  <li/>
+	</ul>
+
+      <p>Preliminary training and development sets are available here:</p>
+      <ul>
+	<li><a href="data/shared_task_traindata_jan29.tsv.gz">Training data (unverified)</a></li>
+	<li><a href="data/shared_task_devdata_jan29.tsv.gz">Development data (will be manually verified)</a></li>
+      </ul>
+      <p>If you are interested in participating in the shared task, please send an email to <a href="mailto:michael.roth@ims.uni-stuttgart.de">Michael Roth</a> to register and receive updates.</p>      
 
       <a name="call"></a>
       <div class="page-header">
@@ -152,12 +172,15 @@
       <h1>Important Dates</h1>
 
       <ul>
-	<li><del>December 21, 2020: First Call for Workshop Papers</del></li>
-	<li>February 15, 2021: Second Call for Workshop Papers</li>
-	<li>April 26, 2021: Workshop Paper Due Date</li>
-	<li>May 28, 2021: Notification of Acceptance</li>
+	<li><del>December 21, 2020: First call for workshop papers</del></li>
+	<li>February 15, 2021: Second call for workshop papers</li>
+	<li>April 14, 2021: Start of shared task evaluation</li>
+	<li>April 26, 2021: Regular workshop paper due date</li>
+	<li>April 28, 2021: End of shared task evaluation</li>
+	<li>May 14, 2021: Shared task papers due date</li>
+	<li>May 28, 2021: Notification of acceptance</li>
 	<li>June 7, 2021: Camera-ready papers due</li>
-	<li>August 5-6, 2021: Workshop Dates</li>
+	<li>August 5/6, 2021: Workshop date</li>
       </ul>
 
       All deadlines are 11:59PM UTC-12:00 ("anywhere on Earth").
