@@ -1,0 +1,73 @@
+### OVERVIEW ###
+
+This dataset contains sentences that were extracted from the revision histories
+of www.wikiHow.com articles. There are two subsets: (a) sentences from the
+revision history that later received edits which made the sentence more precise
+and (b) sentences that remained unchanged over multiple revisions of the article.
+
+### DATA ###
+
+The dataset is split into training, development and test, following the split by
+article from the original wikiHowToImprove release [1]. Sentences labelled as
+"requires revision" were extracted using a rule-based approach that compared
+each sentence with edited versions later in the revision history. The following
+revision types are part of this labeled set of sentences:
+
+ * Replacements of pronouns with more precise noun phrases
+ * Replacements of 'do' as a full verb with more precise verbs
+ * Insertions of optional verbal phrase complements
+ * Insertions of adverbial and adjectival modifiers
+ * Insertions of logical quantifiers and modal verbs
+
+In addition to sentences that "require" revision (according to the revision
+history), the data contains sentences that remained unrevised over multiple
+versions of the article and that are also part of its final version.
+
+[1] see https://github.com/irshadbhat/wikiHowToImprove/tree/master/data
+
+### FORMAT ###
+
+The data is provided in a tab-separated format (.tsv) with the following columns:
+
+ 1. Filename of the article (revision history)
+ 2. Line number in the revision history
+ 3. Sentence label ("REQ_REVISION" or "KEEP_UNREVIS")
+ 4. Tokenized sentence
+ 5. Sentence context (full line from revision history)
+
+### REFERENCE ###
+
+If you use this data, please cite the following papers:
+
+@inproceedings{anthonio-etal-2020-wikihowtoimprove,
+    title = "wiki{H}ow{T}o{I}mprove: A Resource and Analyses on Edits in Instructional Texts",
+    author = "Anthonio, Talita  and
+      Bhat, Irshad  and
+      Roth, Michael",
+    booktitle = "Proceedings of the 12th Language Resources and Evaluation Conference",
+    month = may,
+    year = "2020",
+    address = "Marseille, France",
+    publisher = "European Language Resources Association",
+    url = "https://www.aclweb.org/anthology/2020.lrec-1.702",
+    pages = "5721--5729",
+    abstract = "Instructional texts, such as articles in wikiHow, describe the actions necessary to accomplish a certain goal. In wikiHow and other resources, such instructions are subject to revision edits on a regular basis. Do these edits improve instructions only in terms of style and correctness, or do they provide clarifications necessary to follow the instructions and to accomplish the goal? We describe a resource and first studies towards answering this question. Specifically, we create wikiHowToImprove, a collection of revision histories for about 2.7 million sentences from about 246000 wikiHow articles. We describe human annotation studies on categorizing a subset of sentence-level edits and provide baseline models for the task of automatically distinguishing {``}older{''} from {``}newer{''} revisions of a sentence.",
+    language = "English",
+    ISBN = "979-10-95546-34-4",
+}	   
+
+@inproceedings{bhat-etal-2020-towards,
+    title = "Towards Modeling Revision Requirements in wiki{H}ow Instructions",
+    author = "Bhat, Irshad  and    
+      Anthonio, Talita  and	
+      Roth, Michael",	
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.675",
+    doi = "10.18653/v1/2020.emnlp-main.675",
+    pages = "8407--8414",
+    abstract = "wikiHow is a resource of how-to guidesthat describe the steps necessary to accomplish a goal. Guides in this resource are regularly edited by a community of users, who try to improve instructions in terms of style, clarity and correctness. In this work, we test whether the need for such edits can be predicted automatically. For this task, we extend an existing resource of textual edits with a complementary set of approx. 4 million sentences that remain unedited over time and report on the outcome of two revision modeling experiments.",
+}
