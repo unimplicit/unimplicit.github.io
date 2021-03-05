@@ -5,6 +5,8 @@ of www.wikiHow.com articles. There are two subsets: (a) sentences from the
 revision history that later received edits which made the sentence more precise
 and (b) sentences that remained unchanged over multiple revisions of the article.
 
+Last update: 5 March 2021 (added revisions and types to training data)
+
 ### DATA ###
 
 The dataset is split into training, development and test, following the split by
@@ -13,11 +15,11 @@ article from the original wikiHowToImprove release [1]. Sentences labelled as
 each sentence with edited versions later in the revision history. The following
 revision types are part of this labeled set of sentences:
 
- * Replacements of pronouns with more precise noun phrases
- * Replacements of 'do' as a full verb with more precise verbs
- * Insertions of optional verbal phrase complements
- * Insertions of adverbial and adjectival modifiers
- * Insertions of logical quantifiers and modal verbs
+ * Replacements of pronouns with more precise noun phrases (REPLACED_PRONOUN)
+ * Replacements of 'do' as a full verb with more precise verbs (REPLACED_DO)
+ * Insertions of optional verbal phrase complements (ADDED_ARG)
+ * Insertions of adverbial and adjectival modifiers (ADDED_MOD)
+ * Insertions of logical quantifiers and modal verbs (ADDED_QUANT and ADDED_MOD)
 
 In addition to sentences that "require" revision (according to the revision
 history), the data contains sentences that remained unrevised over multiple
@@ -34,6 +36,8 @@ The data is provided in a tab-separated format (.tsv) with the following columns
  3. Sentence label ("REQ_REVISION" or "KEEP_UNREVIS")
  4. Tokenized sentence
  5. Sentence context (full line from revision history)
+ 6. Type of revision, if applicable (training set only)
+ 7. Revised sentence, if applicable (training set only)
 
 ### REFERENCE ###
 
